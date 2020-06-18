@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             xmlns:tt="clr-namespace:TouchTracking.Forms;assembly=TouchTracking.Forms"
+             mc:Ignorable="d"
+             x:Class="AbbottCredentialMobile.Assinar"
+             BackgroundImageSource="bg.png" Title="Assinatura - Por favor assine no espaço em branco">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <RelativeLayout Grid.Row="1">
+            <Label BackgroundColor="White" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Label>
+            <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <skia:SKCanvasView x:Name="canvasView" Grid.ColumnSpan="2"
+                           PaintSurface="OnCanvasViewPaintSurface" />
+                <Grid.Effects>
+                    <tt:TouchEffect Capture="True"
+                            TouchAction="OnTouchEffectAction" />
+                </Grid.Effects>
+            </Grid>
+        </RelativeLayout>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Text="Limpar" WidthRequest="200" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="#2196F3" TextColor="White" Clicked="Button_Clicked" />
+            <Button Text="Salvar" Grid.Column="1" WidthRequest="200" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="#2196F3" TextColor="White" Clicked="Button_Clicked_1" />
+        </Grid>
+    </Grid>
+</ContentPage>

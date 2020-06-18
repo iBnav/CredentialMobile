@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AbbottCredentialMobile.BuscarCRM"
+             BackgroundImageSource="bg.png" Title="Buscar por UPI">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <RelativeLayout Grid.Row="1">
+            <Label BackgroundColor="Black" Opacity=".5" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Label>
+            <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="10" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Entry x:Name="txtCRM" Keyboard="Numeric" Placeholder="Por favor, digite aqui o UPI" Grid.Column="1" Grid.Row="1" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="400" />
+                <Button Text="Buscar" HorizontalOptions="Center" BackgroundColor="#2196F3" TextColor="White" VerticalOptions="Center" WidthRequest="100" Grid.Row="2" Grid.Column="1" Clicked="Buscar" />
+            </Grid>
+        </RelativeLayout>
+    </Grid>
+</ContentPage>

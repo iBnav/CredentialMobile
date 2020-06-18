@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AbbottCredentialMobile.MainPage"
+             BackgroundImageSource="bg.png">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <RelativeLayout Grid.Row="2">
+            <Label BackgroundColor="Black" Opacity=".5" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Label>
+            <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="5" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Text="Seja bem-vindo à Convenção EPD 2020" FontSize="30" TextColor="White" Margin="0,30,0,0" HorizontalOptions="Center"></Label>
+                <Label Grid.Row="1" Text="A Abbott poderá usar os dados informados, única e exclusivamente, para seus arquivos internos e para o cumprimento de quaisquer obrigações relacionadas a legislação vigente"
+                   FontSize="23" HorizontalTextAlignment="Center" TextColor="White" HorizontalOptions="Center" Margin="30, 5"></Label>
+                <Button Grid.Row="2" Text="Declaro estar ciente" Margin="5" HorizontalOptions="Center" Clicked="Comecar" BackgroundColor="#2196F3" TextColor="White"></Button>
+            </Grid>
+        </RelativeLayout>
+    </Grid>
+
+</ContentPage>

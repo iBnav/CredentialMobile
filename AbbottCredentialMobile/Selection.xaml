@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AbbottCredentialMobile.Selection"
+             BackgroundImageSource="bg.png" Title="Selecione a opção desejada">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="150" />
+            </Grid.RowDefinitions>
+            <RelativeLayout Grid.Row="1">
+                <Label RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}" BackgroundColor="Black" Opacity=".5"
+                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"/>
+                <Grid RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}"
+                      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <Button Text="Sou colaborador Abbott" VerticalOptions="Center" HeightRequest="140" HorizontalOptions="Center" Grid.Row="1" WidthRequest="400" BackgroundColor="#2196F3" TextColor="White" Clicked="Colaborador" FontSize="30" />
+                    <Button Text="Não sou colaborador Abbott" VerticalOptions="Center" HeightRequest="140" HorizontalOptions="Center" Grid.Row="2" WidthRequest="400" BackgroundColor="#2196F3" TextColor="White" Clicked="NaoColaborador" FontSize="30" />
+                    <Button Text="Cadastrar" VerticalOptions="Center" HeightRequest="140" HorizontalOptions="Center" Grid.Row="3" WidthRequest="400" BackgroundColor="#2196F3" TextColor="White" Clicked="Cadastrar" FontSize="30" />
+                </Grid>
+            </RelativeLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AbbottCredentialMobile.Cadastrar"
+             BackgroundImageSource="bg.png" Title="Cadastrar">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="150" />
+        </Grid.RowDefinitions>
+        <RelativeLayout Grid.Row="1">
+            <Label BackgroundColor="Black" Opacity=".5" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"></Label>
+            <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="10" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Entry x:Name="txtCrm" Keyboard="Numeric" Placeholder="CRM (Se médico)" Grid.Row="1" Grid.Column="1" BackgroundColor="White" />
+                <Entry x:Name="txtUpi" Keyboard="Numeric" Placeholder="UPI (Se funcionário)" Grid.Row="2" Grid.Column="1" BackgroundColor="White" />
+                <Entry x:Name="txtCPF" Keyboard="Numeric" Placeholder="CPF" Grid.Row="3" Grid.Column="1" BackgroundColor="White" />
+                <Entry x:Name="txtNome" Keyboard="Text" Placeholder="Nome" Grid.Row="4" Grid.Column="1" BackgroundColor="White" />
+                <Entry x:Name="txtEmail" Keyboard="Email" Placeholder="Email" Grid.Row="5" Grid.Column="1" BackgroundColor="White" />
+                <Button x:Name="btnSalvar" Text="Salvar" BackgroundColor="#2196F3" TextColor="White" Grid.Column="1" Grid.Row="6" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="150" Clicked="Salvar" />
+            </Grid>
+        </RelativeLayout>
+    </Grid>
+</ContentPage>
